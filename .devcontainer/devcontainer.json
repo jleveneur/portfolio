@@ -17,7 +17,9 @@
         "dbaeumer.vscode-eslint",
         "christian-kohler.path-intellisense",
         "streetsidesoftware.code-spell-checker",
-        "YoavBls.pretty-ts-errors"
+        "YoavBls.pretty-ts-errors",
+        "bradlc.vscode-tailwindcss",
+        "dsznajder.es7-react-js-snippets"
       ]
     }
   }
