@@ -4,6 +4,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -31,15 +32,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className='flex min-h-screen w-full flex-col lg:flex-row'>
+          <div className='flex flex-col min-h-screen'>
             <Header />
 
-            <div className='mt-16 flex-1 overflow-hidden py-8 lg:max-h-screen lg:py-10'>
-              <div className='max-w-5xl mx-auto px-5 md:px-10 w-full'>
-                {children}
-              </div>
-            </div>
-          </main>
+            <main className='flex-1 border-b'>
+              <div className='container mx-auto py-8 md:py-12'>{children}</div>
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
