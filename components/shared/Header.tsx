@@ -15,7 +15,6 @@ import {
 } from '@/components/ui/sheet';
 import { navLinks, socialLinks } from '@/constants';
 import { Separator } from '../ui/separator';
-import { useState } from 'react';
 
 const Header = () => {
   return (
