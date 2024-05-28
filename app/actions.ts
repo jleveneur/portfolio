@@ -5,16 +5,13 @@ import { personalInfo } from '@/constants';
 import { render } from '@react-email/render';
 import { Resend } from 'resend';
 
-interface State {
-  error: string | null;
-  success: boolean;
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
 }
 
-export const sendEmail = async (prevState: State, formData: FormData) => {
-  const name = formData.get('name') as string;
-  const email = formData.get('email') as string;
-  const message = formData.get('message') as string;
-
+export const sendEmail = async ({ name, email, message }: FormData) => {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
