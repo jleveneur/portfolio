@@ -33,3 +33,12 @@ export const socialLinks = [
     icon: '/assets/icons/linkedin.svg',
   },
 ];
+
+export const personalInfo = {
+  name: 'Julien Leveneur',
+  title: 'Full-stack Developer',
+  email: 'jleveneur.pro@gmail.com',
+  location: 'Amiens, France',
+  phone: '+33 6 59 39 59 44',
+  website: 'https://jleveneur.pro',
+};

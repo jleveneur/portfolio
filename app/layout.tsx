@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
+import { Toaster } from '@/components/ui/toaster';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -36,9 +37,12 @@ export default function RootLayout({
             <Header />
 
             <main className='flex-1 border-b'>
-              <div className='container mx-auto py-8 md:py-12'>{children}</div>
+              <div className='container mx-auto py-8 md:py-12 lg:py-16 xl:py-20'>
+                {children}
+              </div>
             </main>
             <Footer />
+            <Toaster />
           </div>
         </ThemeProvider>
       </body>
