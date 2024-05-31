@@ -15,8 +15,11 @@ import {
 } from "@/components/ui/sheet";
 import { navLinks, socialLinks } from "@/constants";
 import { Separator } from "../ui/separator";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
@@ -70,7 +73,11 @@ const Header = () => {
             <Link
               key={link.label}
               href={link.route}
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
+              className={`${
+                pathname === link.route
+                  ? "text-foreground"
+                  : "text-foreground/60"
+              } transition-colors hover:text-foreground/80`}
             >
               {link.label}
             </Link>
