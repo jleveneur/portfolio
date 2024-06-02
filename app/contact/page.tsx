@@ -19,7 +19,7 @@ import { Mail, Phone, SendHorizonal } from "lucide-react";
 import { personalInfo } from "@/constants";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
-import { LoadingSpinner } from "@/components/shared/LoadingSpinner";
+import { LoadingSpinner } from "@/components/shared/loading-spinner";
 
 const ContactFormSchema = z.object({
   name: z.string().min(2, {
@@ -101,7 +101,7 @@ const Contact = () => {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder="John Doe" required {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -114,7 +114,12 @@ const Contact = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="example@yourdomain.com" {...field} />
+                    <Input
+                      type="email"
+                      placeholder="example@yourdomain.com"
+                      required
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -127,7 +132,7 @@ const Contact = () => {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Hi there..." {...field} />
+                    <Textarea placeholder="Hi there..." required {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
