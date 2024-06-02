@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
-import { ModeToggle } from "./ModeToggle";
+import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
 import {
   Sheet,
