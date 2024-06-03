@@ -41,6 +41,8 @@ export const personalInfo = {
   birthDate: "16 Mai 2001",
   birthPlace: "Pontoise",
   title: "Full-stack Developer",
+  description:
+    "Alternant à la CPAM de la Somme à Amiens, je maîtrise les technologies front-end et back-end pour développer des applications web robustes. Passionné par l'innovation, je crée des solutions numériques efficaces.",
   email: "jleveneur.pro@gmail.com",
   location: "Amiens, France",
   phone: "+33 6 59 39 59 44",
