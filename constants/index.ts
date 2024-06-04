@@ -2,19 +2,19 @@ import { EducationItem, ExperienceItem } from "@/types";
 
 export const navLinks = [
   {
-    label: "Home",
+    label: "Accueil",
     route: "/",
     icon: "/assets/icons/home.svg",
   },
   {
-    label: "Projects",
-    route: "/projects",
-    icon: "/assets/icons/projects.svg",
+    label: "Compétences",
+    route: "/skills",
+    icon: "/assets/icons/brain.svg",
   },
   {
-    label: "About",
-    route: "/about",
-    icon: "/assets/icons/about.svg",
+    label: "Références",
+    route: "/references",
+    icon: "/assets/icons/book-marked.svg",
   },
   {
     label: "Contact",
