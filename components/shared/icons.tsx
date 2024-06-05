@@ -3,13 +3,21 @@ import {
   ArrowUpIcon,
   BookMarkedIcon,
   BrainIcon,
+  CheckIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronsLeftIcon,
+  ChevronsRightIcon,
+  CirclePlusIcon,
   ContactIcon,
   EyeOffIcon,
   HomeIcon,
   LinkedinIcon,
   LucideProps,
   MoonIcon,
+  Settings2Icon,
   SunIcon,
+  XIcon,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -35,7 +43,14 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  Check: CheckIcon,
+  ChevronLeft: ChevronLeftIcon,
+  ChevronRight: ChevronRightIcon,
+  ChevronsLeft: ChevronsLeftIcon,
+  ChevronsRight: ChevronsRightIcon,
+  CirclePlus: CirclePlusIcon,
   Contact: ContactIcon,
+  Close: XIcon,
   EyeOff: EyeOffIcon,
   GitHub: ({ ...props }: LucideProps) => (
     <svg
@@ -89,6 +104,7 @@ export const Icons = {
     </svg>
   ),
   Moon: MoonIcon,
+  Settings: Settings2Icon,
   Sun: SunIcon,
 };
 
