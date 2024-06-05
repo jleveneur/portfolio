@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { buttonVariants } from "../ui/button";
 import { ModeToggle } from "./mode-toggle";
-import Image from "next/image";
 import {
   Sheet,
   SheetClose,
@@ -15,7 +16,7 @@ import {
 } from "@/components/ui/sheet";
 import { navLinks, socialLinks } from "@/constants";
 import { Separator } from "../ui/separator";
-import { usePathname } from "next/navigation";
+import { Icon } from "./icons";
 
 const Header = () => {
   const pathname = usePathname();
@@ -29,14 +30,7 @@ const Header = () => {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger>
-              <Image
-                src="/assets/icons/menu.svg"
-                alt="Menu"
-                width={20}
-                height={20}
-                className="dark:invert"
-                priority
-              />
+              <Icon name="Menu" className="h-5 w-5" />
             </SheetTrigger>
             <SheetContent side="left">
               <SheetHeader>
@@ -53,13 +47,7 @@ const Header = () => {
                       href={link.route}
                       className="flex items-center gap-3 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
                     >
-                      <Image
-                        src={link.icon}
-                        alt={link.label}
-                        width={20}
-                        height={20}
-                        className="dark:invert"
-                      />
+                      <Icon name={link.icon} className="h-5 w-5" />
                       <span className="text-lg font-bold">{link.label}</span>
                     </Link>
                   </SheetClose>
@@ -91,13 +79,7 @@ const Header = () => {
               href={link.url}
               target="_blank"
             >
-              <Image
-                src={link.icon}
-                alt={link.label}
-                width={16}
-                height={16}
-                className="dark:invert"
-              />
+              <Icon name={link.icon} className="h-4 w-4" />
             </Link>
           ))}
           <ModeToggle />
