@@ -71,8 +71,11 @@ const Contact = () => {
   return (
     <section className="flex flex-col gap-4 md:flex-row">
       <div className="flex-1">
-        <h1 className="text-4xl font-bold md:text-5xl">Let&apos;s talk</h1>
-        <p className="mt-4 text-lg">Ask me anything or just say hi.</p>
+        <h1 className="text-4xl font-bold md:text-5xl">Contactez-moi</h1>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-500">
+          Vous avez une question ou un projet en tête ? N&apos;hésitez pas à me
+          contacter en remplissant le formulaire ci-dessous.
+        </p>
         <div className="hidden md:mt-20 md:flex md:flex-col md:gap-2">
           <p className="flex items-center gap-4">
             <Phone className="h-4 w-4" />
@@ -99,7 +102,9 @@ const Contact = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>
+                    Nom complet <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="John Doe" required {...field} />
                   </FormControl>
@@ -112,7 +117,9 @@ const Contact = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>
+                    Adresse email <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Input
                       type="email"
@@ -130,7 +137,9 @@ const Contact = () => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>
+                    Message <span className="text-red-500">*</span>
+                  </FormLabel>
                   <FormControl>
                     <Textarea placeholder="Hi there..." required {...field} />
                   </FormControl>
