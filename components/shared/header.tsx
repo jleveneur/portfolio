@@ -44,7 +44,7 @@ const Header = () => {
                 {navLinks.map((link) => (
                   <SheetClose key={link.label} asChild>
                     <Link
-                      href={link.route}
+                      href={link.url}
                       className="flex items-center gap-3 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
                     >
                       <Icon name={link.icon} className="h-5 w-5" />
@@ -60,11 +60,9 @@ const Header = () => {
           {navLinks.map((link) => (
             <Link
               key={link.label}
-              href={link.route}
+              href={link.url}
               className={`${
-                pathname === link.route
-                  ? "text-foreground"
-                  : "text-foreground/60"
+                pathname === link.url ? "text-foreground" : "text-foreground/60"
               } transition-colors hover:text-foreground/80`}
             >
               {link.label}

@@ -1,38 +1,38 @@
-import { EducationItem, ExperienceItem } from "@/types";
+import { EducationItem, ExperienceItem, Link } from "@/types";
 
-export const navLinks = [
+export const navLinks: Link[] = [
   {
     label: "Accueil",
-    route: "/",
-    icon: "/assets/icons/home.svg",
+    url: "/",
+    icon: "Home",
   },
   {
     label: "Compétences",
-    route: "/skills",
-    icon: "/assets/icons/brain.svg",
+    url: "/skills",
+    icon: "Brain",
   },
   {
     label: "Références",
-    route: "/references",
-    icon: "/assets/icons/book-marked.svg",
+    url: "/references",
+    icon: "BookMarked",
   },
   {
     label: "Contact",
-    route: "/contact",
-    icon: "/assets/icons/contact.svg",
+    url: "/contact",
+    icon: "Contact",
   },
 ];
 
-export const socialLinks = [
+export const socialLinks: Link[] = [
   {
     label: "Github",
     url: "https://github.com/jleveneur/portfolio",
-    icon: "/assets/icons/github.svg",
+    icon: "GitHub",
   },
   {
     label: "Linkedin",
     url: "https://www.linkedin.com/in/jleveneur/",
-    icon: "/assets/icons/linkedin.svg",
+    icon: "Linkedin",
   },
 ];
 
