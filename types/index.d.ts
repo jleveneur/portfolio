@@ -1,3 +1,11 @@
+import { type Icon } from "@/components/shared/icons";
+
+export type Link = {
+  label: string;
+  url: string;
+  icon: Icon;
+};
+
 export type EducationItem = {
   degree: string;
   institution: string;
