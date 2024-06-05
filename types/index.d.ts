@@ -1,3 +1,11 @@
+import { type Icon } from "@/components/shared/icons";
+
+export type Link = {
+  label: string;
+  url: string;
+  icon: Icon;
+};
+
 export type EducationItem = {
   degree: string;
   institution: string;
@@ -21,3 +29,14 @@ export type ExperienceItem = {
 };
 
 export type TimelineItem = EducationItem | ExperienceItem;
+
+export type Skill = {
+  code?: string;
+  title: string;
+  category: string;
+  knowledge: string;
+  experience: string;
+  level: string;
+  type: string;
+  description?: string;
+};
