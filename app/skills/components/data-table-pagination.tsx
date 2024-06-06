@@ -49,7 +49,10 @@ export function DataTablePagination<TData>({
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
-              className="cursor-pointer"
+              className={`
+              cursor-pointer
+              ${table.getCanPreviousPage() ? "" : "pointer-events-none cursor-not-allowed"}
+            `}
               onClick={() => {
                 if (table.getCanPreviousPage()) table.previousPage();
               }}
@@ -68,7 +71,10 @@ export function DataTablePagination<TData>({
           ))}
           <PaginationItem>
             <PaginationNext
-              className="cursor-pointer"
+              className={`
+                cursor-pointer
+                ${table.getCanNextPage() ? "" : "pointer-events-none cursor-not-allowed"}
+              `}
               onClick={() => {
                 if (table.getCanNextPage()) table.nextPage();
               }}

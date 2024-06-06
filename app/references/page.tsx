@@ -1,6 +1,15 @@
 import Image from "next/image";
 import React from "react";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
 const References = () => {
   return (
     <div className="flex max-w-5xl flex-col gap-10">
@@ -15,33 +24,48 @@ const References = () => {
         <h2 className="text-2xl font-bold md:text-3xl">
           Référentiel européen des e-compétences
         </h2>
+
         <p className="text-lg text-gray-600 dark:text-gray-500">
-          Le référentiel européen des e-compétences est un cadre de référence
-          pour décrire les compétences requises pour les TIC. Il est structuré
-          en 40 compétences regroupées en 5 domaines de compétences. Il est
-          utilisé pour la certification des compétences des professionnels des
-          TIC.
+          Le{" "}
+          <Dialog>
+            <DialogTrigger className="font-semibold underline hover:text-blue-500 dark:hover:text-blue-400">
+              référentiel européen des e-compétences
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>
+                  Référentiel européen des e-compétences
+                </DialogTitle>
+                <DialogDescription>
+                  <div className="mt-4 flex flex-col gap-2">
+                    <Image
+                      src="/assets/images/repository.png"
+                      alt="Référentiel européen des e-compétences"
+                      width={800}
+                      height={400}
+                      className="h-auto w-full max-w-md"
+                    />
+                    <h4>
+                      Source :{" "}
+                      <a
+                        href="https://assets.ide-conseil-webmarketing.fr/wp-content/uploads/2019/05/European-e-Competence-Framework-3.0_FR.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 dark:text-blue-400"
+                      >
+                        European e-Competence Framework 3.0
+                      </a>
+                    </h4>
+                  </div>
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>{" "}
+          est un cadre de référence pour décrire les compétences requises pour
+          les TIC. Il est structuré en 40 compétences regroupées en 5 domaines
+          de compétences. Il est utilisé pour la certification des compétences
+          des professionnels des TIC.
         </p>
-        <div className="flex flex-col gap-2">
-          <Image
-            src="/assets/images/repository.png"
-            alt="Référentiel européen des e-compétences"
-            width={800}
-            height={400}
-            className="h-auto w-full max-w-md"
-          />
-          <h4>
-            Source :{" "}
-            <a
-              href="https://assets.ide-conseil-webmarketing.fr/wp-content/uploads/2019/05/European-e-Competence-Framework-3.0_FR.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 dark:text-blue-400"
-            >
-              European e-Competence Framework 3.0
-            </a>
-          </h4>
-        </div>
       </div>
       <div className="flex flex-col gap-5">
         <h2 className="text-2xl font-bold md:text-3xl">

@@ -23,13 +23,13 @@ import { LoadingSpinner } from "@/components/shared/loading-spinner";
 
 const ContactFormSchema = z.object({
   name: z.string().min(2, {
-    message: "Please enter your name.",
+    message: "Entrer un nom valide.",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "Entrer une adresse email valide.",
   }),
   message: z.string().min(10, {
-    message: "Please enter a message with at least 10 characters.",
+    message: "Le message doit contenir au moins 10 caractères.",
   }),
 });
 
@@ -53,8 +53,9 @@ const Contact = () => {
     setIsLoading(false);
     if (success) {
       toast({
-        title: "Email sent!",
-        description: "I will get back to you as soon as possible.",
+        title: "Email envoyé!",
+        description:
+          "Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.",
       });
       form.reset();
     }
@@ -62,8 +63,8 @@ const Contact = () => {
     if (error) {
       toast({
         variant: "destructive",
-        title: "Error!",
-        description: "An error occurred while sending the email.",
+        title: "Erreur",
+        description: "Une erreur s'est produite. Veuillez réessayer.",
       });
     }
   };
@@ -150,12 +151,12 @@ const Contact = () => {
             <Button type="submit" className="font-bold">
               {isLoading ? (
                 <>
-                  SENDING
+                  Envoi en cours...
                   <LoadingSpinner className="ml-2 h-4 w-4" />
                 </>
               ) : (
                 <>
-                  SEND
+                  Envoyer
                   <SendHorizonal className="ml-2 h-4 w-4" />
                 </>
               )}
